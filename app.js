@@ -129,7 +129,7 @@ function changeDescription(self) {
     self.classList.add("active");
 }
 function changeHeading() {
-    var a = "Anmol Ahuja | Frontend Developer";
+    var a = "Nikita Chauhan | Frontend Developer";
     if (document.title.length == a.length) {
         document.title = "Welcome";
     }
@@ -172,7 +172,7 @@ function hireMe() {
     gebid("contact").scrollIntoView({ behavior: "smooth"});
 }
 function downloadCV() {
-    window.open("resume.pdf");
+    window.open("resNikita.pdf");
 }
 function validateEmail(input) {
     var emailValidRegex = /^([a-zA-Z\d])([a-zA-Z\d\.]+([\-_+]{1})?)+@([a-zA-Z\d-]+)\.([a-z]{2,10})(\.[a-z]{2,10})?$/;
@@ -188,3 +188,33 @@ function validateNumber(input) {
     }
     return false;
 }
+
+
+var scrollUp = "scroll-up";
+var scrollDown = "scroll-down";
+var lastScroll = 0;
+
+
+
+var body = document.body;
+window.addEventListener("scroll", () => {
+    var currentScroll = window.pageYOffset;
+    if (currentScroll <= 0) {
+        body.classList.remove(scrollUp);
+        return;
+    }
+
+    if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+        // down
+        body.classList.remove(scrollUp);
+        body.classList.add(scrollDown);
+    } else if (
+        currentScroll < lastScroll &&
+        body.classList.contains(scrollDown)
+    ) {
+        // up
+        body.classList.remove(scrollDown);
+        body.classList.add(scrollUp);
+    }
+    lastScroll = currentScroll;
+});
