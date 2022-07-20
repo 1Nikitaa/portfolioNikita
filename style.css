@@ -156,7 +156,7 @@ body {
 .header-wrapper {
     height: 100%;
     margin: auto;
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
 }
@@ -266,20 +266,18 @@ margin-left:1rem;
 }
 .btn {
     background: #0fb;
-    border: none;
-    border-radius: 3rem;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #303030;
-}
-.start-button {
     padding: 0.5rem 1.5rem;
     border: none;
     border-radius: 2.625rem;
-    margin-left: 2.5rem;
-    cursor: pointer;
+}
+.start-button {
+   margin-left: 2.5rem;
+    
 }
 .hire-me{
     width:10rem;
@@ -1020,7 +1018,7 @@ nav ul li{
 
 .section-right textarea {
     border-radius: 1rem;
-    padding: 2rem 3rem;
+    padding: 1rem;
     margin-bottom: 2.5rem;
     font-weight: 400;
     line-height: 1.5rem;
@@ -1055,7 +1053,7 @@ footer {
     display:flex;
     align-items:center;
     justify-content:space-between;
-    width:80%;
+    width:90%;
 }
 .footer-left {
     width: 60%;
@@ -1095,7 +1093,7 @@ service-card p {
 }
 
 .content {
-    width: 70%;
+    width: 90%;
     margin: auto;
 }
 .flex{
@@ -1145,6 +1143,7 @@ service-card p {
     width: 80%;
     border: 1px solid white;
     border-radius: 1rem;
+    padding:0 2rem;
 }
 .description-img {
     margin-top: 3rem;
