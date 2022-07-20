@@ -1057,12 +1057,11 @@ footer {
 }
 .footer-left {
     width: 60%;
-    height:100%;
     display: flex;
     justify-content: space-between;
 }
 .footer-left img{
-    height:100%;
+    width:15%;
 }
 .copyright {
     display:flex;
@@ -1306,7 +1305,7 @@ border-radius:20%;
 }
 
 .header-wrapper .logo img{
-    height:3.5rem;
+    height:3rem;
    
 }
 @media only screen and (max-width:1540px) {
@@ -1360,4 +1359,15 @@ border-radius:20%;
         font-size: 11px;
         line-height: 1.4em;
     }
+}
+.scroll-down .header-wrapper {
+    transform: translate3d(0, -100%, 0);
+}
+
+.scroll-down .header-wrapper {
+    background: var(--darkgray);
+}
+
+.scroll-up .header-wrapper {
+    transform: translate3d(0, 100%, 0);
 }
