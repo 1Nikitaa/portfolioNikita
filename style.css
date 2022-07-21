@@ -160,6 +160,20 @@ body {
     display: flex;
     justify-content: space-between;
 }
+.hamburger-menu {
+    border-radius: 50%;
+    width: 2.7rem;
+    height: 2.7rem;
+    margin: auto 0;
+    margin-left: 1rem;
+    cursor: pointer;
+    text-align: center;
+    display: none;
+    background: url(Img/header-hamburger-menu.png) no-repeat center center;
+    background-color: #0fb;
+    background-size: 65%;
+}
+
 /*header css Start*/
 header, footer {
     width: 100%;
@@ -285,6 +299,43 @@ margin-left:1rem;
 .header-ul{
     display:flex;
     align-items:center;
+    opacity:0;
+}
+.cross {
+    background: url(Img/header-cross-button.svg) no-repeat center center;
+    width: 2.7rem;
+    height: 2.7rem;
+    margin: auto 0;
+    margin-left: 1rem;
+    cursor: pointer;
+    text-align: center;
+    display: none;
+    z-index:2;
+    border-radius:50%;
+    background-color: #0fb;
+    background-size: 50%;
+}
+
+.header-ul.header-show-overlay {
+    width: 46vw;
+    top: -59%;
+    position: absolute;
+    right: 0;
+    height: 79vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 13% 5%;
+    border: 1px solid #00FFBB;
+    justify-content: space-around;
+    align-items: flex-start;
+    transition: opacity 1s 1s;
+    flex-direction: column;
+    display: flex;
+}
+.navbar-open .hamburger-menu{
+    display:none;
+}
+.navbar-open .cross{
+    display:inline-block;
 }
 /*random box Start*/
 .square {
@@ -1203,11 +1254,6 @@ border-radius:20%;
     color:white;
 
 }
-@media screen and (max-width: 1300px) {
-    html {
-        font-size: 45%;
-    }
-}
 
 @media screen and (max-width: 950px) {
     .description-img {
@@ -1249,14 +1295,17 @@ border-radius:20%;
     #contact .section-right {
         width: 80%;
     }
-    .header-wrapper {
-        justify-content: center;
+
+    .hamburger-menu {
+        display: inline-block;
     }
 
-        .header-wrapper nav {
-            display: none;
-        }
-
+    .header-ul {
+        display: none;
+    }
+    .start-button{
+        margin-left:0;
+    }
     .img-wrapper {
         display: none;
     }
@@ -1294,12 +1343,7 @@ border-radius:20%;
     }
 }
 
-@media screen and (max-width: 700px) {
-    html {
-        font-size: 35%;
-    }
-    
-}
+
 .logo-section a img{
     height:20px;
 }
@@ -1313,13 +1357,15 @@ border-radius:20%;
         font-size: 21px;
         line-height: 1.5em;
     }
+    
 }
 
 @media only screen and (max-width:1300px) {
     html {
         font-size: 20px;
         line-height: 1.5em;
-    }
+    }   
+    
 }
 
 @media only screen and (orientation:landscape) and (min-height:500px) and (min-width:550px) and (max-width:1100px) {
@@ -1327,6 +1373,7 @@ border-radius:20%;
         font-size: 16px;
         line-height: 1.4em;
     }
+    
 }
 
 @media only screen and (orientation: portrait), screen and (orientation : landscape) and (max-width:550px) {
@@ -1335,24 +1382,36 @@ border-radius:20%;
         line-height: 1.5em;
         margin-right: 0.5rem;
     }
+
 }
 @media only screen and (max-width:800px) {
     html {
         font-size: 19px;
         line-height: 1.5em;
     }
+    
 }
 @media only screen and (max-width:550px) {
     html {
         font-size: 15px;
         line-height: 1.5em;
     }
+    .hamburger-menu {
+        display: inline-block;
+    }
+
+    .header-ul {
+        display: none;
+    }
+
+    
 }
 @media only screen and (max-width:428px) {
     html {
         font-size: 13px;
         line-height: 1.5em;
     }
+    
 }
 @media only screen and (max-width:428px) and (orientation: portrait) and (max-height:600px) {
     html {
