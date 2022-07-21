@@ -172,7 +172,8 @@ function sendEmail() {
     }
 }
 function hireMe() {
-    gebid("contact").scrollIntoView({ behavior: "smooth"});
+    gebid("contact").scrollIntoView({ behavior: "smooth" });
+    toggleNavBar();
 }
 function downloadCV() {
     window.open("resNikita.pdf");
