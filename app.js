@@ -112,6 +112,7 @@ function changeScreen(self) {
         behavior: 'smooth'
     });
     sectionDiv.classList.add("active");
+    toggleNavBar();
 
 }
 function changeDescription(self) {
