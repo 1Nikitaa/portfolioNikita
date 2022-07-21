@@ -299,7 +299,7 @@ margin-left:1rem;
 .header-ul{
     display:flex;
     align-items:center;
-    opacity:0;
+    
 }
 .cross {
     background: url(Img/header-cross-button.svg) no-repeat center center;
