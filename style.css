@@ -321,11 +321,10 @@ margin-left:1rem;
     top: -59%;
     position: absolute;
     right: 0;
-    height: 80vh;
+    height: 55h;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 13% 5%;
     border: 1px solid #00FFBB;
-    justify-content: space-around;
     align-items: flex-start;
     transition: opacity 1s 1s;
     flex-direction: column;
@@ -335,8 +334,9 @@ margin-left:1rem;
         background-color: #0fb;
         padding: 3%;
         border-radius: 10px;
-        color:black;
-        margin:5% 0;
+        color: black;
+        margin: 5% 0;
+        font-weight: 600;
     }
     .header-ul.header-show-overlay li:last-child {
         background-color:rgba(0, 0, 0, 0.9);
