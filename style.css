@@ -317,15 +317,15 @@ margin-left:1rem;
 }
 
 .header-ul.header-show-overlay {
-    width: 52vw;
+    width: 90vw;
     top: -59%;
     position: absolute;
     right: 0;
-    height: 50vh;
+    height: 80vh;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 13% 5%;
     border: 1px solid #00FFBB;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: flex-start;
     transition: opacity 1s 1s;
     flex-direction: column;
