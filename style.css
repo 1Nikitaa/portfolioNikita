@@ -1281,8 +1281,13 @@ border-radius:20%;
     html {
         font-size: 40%;
     }
-    #home .section-right{
-        display:none;
+    #home .content{
+        flex-direction:column-reverse;
+    }
+    #home .section-right {
+        width: 60%;
+        margin: auto;
+        margin-bottom:2%;
     }
     #home .section-left {
    width:80%;
@@ -1318,9 +1323,7 @@ border-radius:20%;
     .start-button{
         margin-left:0;
     }
-    .img-wrapper {
-        display: none;
-    }
+    
 
     .image-me {
         display: none;
