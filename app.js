@@ -99,9 +99,6 @@ function changeHeader() {
             }
         }
     }
-
-
-
 }
 function changeScreen(self) {
     var sections = document.getElementsByTagName("section");
@@ -145,10 +142,13 @@ window.addEventListener(onscroll, sp);
 
 function sendEmail() {
     var flag = true;
+    var subject="hi";
     var arr = document.getElementsByClassName("data");
-    for (var i = 0; i < arr.length; i++) {
+    console.log(arr);
+    for (var i = 0; i < 4; i++) {
         if (arr[i].classList.contains("email")) {
             flag = validateEmail(arr[i].value);
+            
         }
         else if (arr[i].classList.contains("number")) {
             flag = validateNumber(arr[i].value);
@@ -162,9 +162,11 @@ function sendEmail() {
     }
     else {
         var btn = gebid("sendEmail-btn");
+        btn.setAttribute('href', "mailto:nk.3niki@gmail.com?subject=" + subject);
         setTimeout(function (text) {
             btn.innerText = "Submit";
-        }, 3000);
+        }, 3000);   
+        
         btn.innerText = "Sent";
     }
 }
@@ -177,6 +179,7 @@ function downloadCV() {
 function validateEmail(input) {
     var emailValidRegex = /^([a-zA-Z\d])([a-zA-Z\d\.]+([\-_+]{1})?)+@([a-zA-Z\d-]+)\.([a-z]{2,10})(\.[a-z]{2,10})?$/;
     if (input.match(emailValidRegex)) {
+        console.log("matched")
         return true;
     }
     return false;
@@ -184,6 +187,7 @@ function validateEmail(input) {
 function validateNumber(input) {
     var phoneValidRegex = /^((\+|(00))?91|0)?[6789]{1}\d{9}$/;
     if (input.match(phoneValidRegex)) {
+        console.log("nummatched")
         return true;
     }
     return false;
@@ -218,3 +222,17 @@ window.addEventListener("scroll", () => {
     }
     lastScroll = currentScroll;
 });
+
+
+function getBodyClassList() {
+    return document.body.classList;
+}
+function toggleNavBar() {
+    getBodyClassList().toggle("navbar-open");
+    if (getBodyClassList().contains("navbar-open")) {
+        gebid("header-ul").classList.add("header-show-overlay");
+        gebid("header-ul").style.opacity = "1";
+    } else {
+        gebid("header-ul").classList.remove("header-show-overlay");
+    }
+}
